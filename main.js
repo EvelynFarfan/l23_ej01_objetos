@@ -5,19 +5,18 @@ window.addEventListener("load", function() {
 		var edad = parseInt(document.getElementById('edad').value);
 		var genero =document.getElementById("genero").value;
 		Persona(nombre, edad,genero);
-
 		function Persona(nombre,edad,genero){
 			this.nombre = nombre;
 			this.edad = edad;
 			this.gerero = genero;
 			this.mayorDeEdad = (this.edad >= 18);
 			this.presetancion = function(){
-					// return "soy" + ((this.mayorDeEdad) ? "mayor" : "menor") + "de edad"
-			 		if(this.mayorDeEdad){
-						return "Hola mi nombre es " + this.nombre + " tengo " + this.edad + " años y soy mayor de edad."
-					}else{
-						return "Hola mi nombre es " + this.nombre + " tengo " + this.edad + " años y soy menor de edad."
-					}
+				// return "soy" + ((this.mayorDeEdad) ? "mayor" : "menor") + "de edad"
+		 		if(this.mayorDeEdad){
+					return "Hola mi nombre es " + this.nombre + " tengo " + this.edad + " años y soy mayor de edad."
+				}else{
+					return "Hola mi nombre es " + this.nombre + " tengo " + this.edad + " años y soy menor de edad."
+				}
 			}
 		}
 		var persona1 = new Persona (nombre, edad, genero);
